@@ -1,0 +1,113 @@
+const fs = require('fs');
+
+setTimeout(() => {
+    console.log('Timeout');
+}, 11);
+
+setImmediate(() => {
+    console.log('Immediate');
+});
+
+function hye() {
+    fs.readFile('file.txt', 'utf-8', (err, data) => {
+        if (err) throw err;
+        console.log('File Read');
+    })
+}
+x();const fs = require('fs');
+
+setTimeout(() => {
+    console.log('Timeout');
+}, 11);
+
+setImmediate(() => {
+    console.log('Immediate');
+});
+
+function hye() {
+    fs.readFile('file.txt', 'utf-8', (err, data) => {
+        if (err) throw err;
+        console.log('File Read');
+    })
+}
+x();const fs = require('fs');
+
+setTimeout(() => {
+    console.log('Timeout');
+}, 11);
+
+setImmediate(() => {
+    console.log('Immediate');
+});
+
+function hye() {
+    fs.readFile('file.txt', 'utf-8', (err, data) => {
+        if (err) throw err;
+        console.log('File Read');
+    })
+}
+x();const fs = require('fs');
+
+setTimeout(() => {
+    console.log('Timeout');
+}, 11);
+
+setImmediate(() => {
+    console.log('Immediate');
+});
+
+function hye() {
+    fs.readFile('file.txt', 'utf-8', (err, data) => {
+        if (err) throw err;
+        console.log('File Read');
+    })
+}
+x();const fs = require('fs');
+
+setTimeout(() => {
+    console.log('Timeout');
+}, 11);
+
+setImmediate(() => {
+    console.log('Immediate');
+});
+
+function hye() {
+    fs.readFile('file.txt', 'utf-8', (err, data) => {
+        if (err) throw err;
+        console.log('File Read');
+    })
+}
+x();const fs = require('fs');
+
+setTimeout(() => {
+    console.log('Timeout');
+}, 11);
+
+setImmediate(() => {
+    console.log('Immediate');
+});
+
+function hye() {
+    fs.readFile('file.txt', 'utf-8', (err, data) => {
+        if (err) throw err;
+        console.log('File Read');
+    })
+}
+x();const fs = require('fs');
+
+setTimeout(() => {
+    console.log('Timeout');
+}, 11);
+
+setImmediate(() => {
+    console.log('Immediate');
+});
+
+function hye() {
+    fs.readFile('file.txt', 'utf-8', (err, data) => {
+        if (err) throw err;
+        console.log('File Read');
+    })
+}
+x();
