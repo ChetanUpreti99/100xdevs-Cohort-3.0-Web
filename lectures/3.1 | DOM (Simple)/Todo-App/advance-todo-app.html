@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+</head>
+
+<body>
+    <div id="todo-container">
+    </div>
+    <input type="text">
+    <button onclick="addTodo()">Add Todo</button>
+    <script>
+        let currentIndex = 1;
+
+        function deleteTodo(index) {
+            const liEle = document.querySelector("#todo-" + index);
+            liEle.parentNode.removeChild(liEle);
+        }
+
+        function addTodo() {
+            const inputEle = document.querySelector("input");
+            let { value } = inputEle;
+            value = value.trim();
+
+            if (!value) {
+                return alert("Please enter a todo item.");
+            }
+            const pEle = document.createElement("p");
+            pEle.textContent = `${currentIndex}. ${value}`;
+            pEle.setAttribute("id", "todo-" + currentIndex);
+
+            const buttonEle = document.createElement("button");
+            buttonEle.textContent = "Delete";
+            buttonEle.setAttribute("onclick", "deleteTodo(" + currentIndex + ")");
+
+            pEle.appendChild(buttonEle);
+
+
+            const divEle = document.querySelector("#todo-container");
+            divEle.appendChild(pEle);
+            currentIndex = currentIndex + 1;
+            inputEle.value = "";
+        }
+    </script>
+</body>
+
+</html>

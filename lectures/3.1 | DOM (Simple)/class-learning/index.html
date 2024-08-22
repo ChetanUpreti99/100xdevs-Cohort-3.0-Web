@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>replit</title>
+	<!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
+</head>
+
+<body>
+
+	<p>
+		What is DOM?
+	</p>
+	<p>
+		DOM or Document object model is programming interface for web documents.
+		It represents structure of a web page as tree of object.
+	</p>
+	<p>
+		Why DOM?
+	</p>
+	<p>
+		DOM abstract the structure of the web page into tree of objects, allowing scripts
+		to manipulate the content and structure dynamically.
+	</p>
+	<h1>Todo list</h1>
+	<h4>1. Take class</h4>
+	<h4>2. Go out to eat</h4>
+	<div id="todo-3" style="display: flex;">
+		<h4>3. Go out to gym</h4>
+		<button onclick="deleteTodo('#todo-3')">Delete Todo</button>
+	</div>
+	<div>
+		<input type="text" placeholder="Add your Todo"></input>
+		<button onclick="addTodo()">Add Todo</button>
+		<button onclick="addTodo2()">Add Todo2</button>
+	</div>
+	<!-- <script src="script.js"></script> -->
+	<!-- <script>
+        const ele = document.querySelector("#todo_3")
+        let counter = 0;
+        setInterval(() => {
+            ele.innerHTML = `${++counter} go to gym`
+        }, 1000)
+    </script> -->
+	<script>
+		function addTodo() {
+			const inputEle = document.querySelector("input");
+			console.log(inputEle.value);
+		}
+	</script>
+	<script>
+		const h4Element = document.querySelectorAll("h4");
+		console.log(h4Element);
+	</script>
+	<script>
+		const todoEle = document.getElementById("todo-3");
+		console.log(todoEle);
+		//getElementsByClassName
+	</script>
+
+	<script>
+		function deleteTodo(id) {
+			const todoEle = document.querySelector(id);
+			console.log(todoEle);
+			const parentEle = todoEle.parentNode;
+			parentEle.removeChild(todoEle);
+		}
+	</script>
+
+	<script>
+		function addTodo2() {
+			const divEle = document.createElement("div");
+			divEle.innerHTML = "Yeh let's go!"
+			const bodyEle = document.querySelector("body");
+			bodyEle.appendChild(divEle);
+		}
+	</script>
+</body>
+
+</html>
