@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<div id="root"></div>
+	<input type="text">
+	<button onclick="addTodo()">Add Todo</button>
+	<script>
+		const todos = [{
+			id: 1,
+			title: "Go to gym"
+		}, {
+			id: 2,
+			title: "Clean the car"
+		}];
+
+		function addTodo() {
+			const inputEle = document.querySelector("input");
+			let { value } = inputEle;
+			value = value.trim();
+
+			if (!value) {
+				return alert("Please enter a todo item.");
+			}
+			todos.push({
+				id: todos.length + 1,
+				title: value,
+			})
+			render(todos);
+			inputEle.value = "";
+		}
+
+		function deleteTodo(index) {
+			const liEle = document.querySelector("#todo-" + index);
+			liEle.parentNode.removeChild(liEle);
+		}
+
+		function render(todos) {
+			let currentIndex = 1;
+			const divEle = document.querySelector("#root");
+			divEle.innerHTML = "";
+			for (let todo of todos) {
+				const pEle = document.createElement("p");
+				pEle.textContent = `${currentIndex}. ${todo.title}`;
+				pEle.setAttribute("id", "todo-" + todo.id);
+				const buttonEle = document.createElement("button");
+				buttonEle.textContent = "Delete";
+				buttonEle.setAttribute("onclick", "deleteTodo(" + todo.id + ")");
+				pEle.appendChild(buttonEle);
+				divEle.appendChild(pEle);
+				currentIndex = currentIndex + 1;
+			}
+		}
+		render(todos);
+	</script>
+
+</body>
+
+</html>

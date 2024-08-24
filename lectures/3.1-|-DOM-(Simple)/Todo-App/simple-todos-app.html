@@ -27,7 +27,7 @@
         const { value } = inputEle;
         const liEle = document.createElement("li");
         liEle.setAttribute("id", "todo-" + ctr);
-        liEle.innerHTML = value + '<div> <button onclick="deleteTodo(' + ctr + ')">Delete</button> </div>'
+        liEle.innerHTML = value + '<div> <button onclick="deleteTodo(' + ctr + ')>Delete</button> </div>'
         const ulEle = document.querySelector("#todo-container");
         ulEle.appendChild(liEle);
         ctr = ctr + 1;
